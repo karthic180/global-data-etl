@@ -1,4 +1,10 @@
+
+
 # Global Data ETL
+
+[![Python](https://img.shields.io/badge/Python-3.13-blue)](https://www.python.org/)
+[![Build Status](https://img.shields.io/github/actions/workflow/status/karthic180/global-data-etl/python-tests.yml)](https://github.com/karthic180/global-data-etl/actions)
+[![Coverage Status](https://img.shields.io/badge/Coverage-50%25-yellow)](https://github.com/karthic180/global-data-etl)# Global Data ETL
 
 A Python-based system to fetch country data, store it in a SQLite database, and provide database operations, testing, system info, health checks, and web dashboard access via Streamlit or Flask.
 
