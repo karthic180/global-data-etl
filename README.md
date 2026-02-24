@@ -7,39 +7,23 @@
 [![Coverage Status](https://img.shields.io/badge/Coverage-50%25-yellow)](https://github.com/karthic180/global-data-etl)# Global Data ETL
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-A Python-based system to fetch country data, store it in a SQLite database, and provide database operations, testing, system info, health checks, and web dashboard access via Streamlit or Flask.
+It is a comprehensive Python project that demonstrates end-to-end data engineering and analytics workflows. It is designed for learning, experimentation, and showcasing a real-world ETL process.
 
----
+## Key features
 
-## Features
+ETL Pipeline: Fetch country-level metadata from public APIs (RestCountries), transform it, and store it in a local SQLite database.
 
-### ETL Pipeline
-- Fetch country data (name, region, subregion) from free APIs.
-- Store data in SQLite database (`global_data.db`).
-- Track fetch metadata: timestamp, API used, fetch method.
-- Supports single country or all countries.
+Database Operations: View, export (CSV, JSON, Excel), and manage the database contents.
 
-### Database Operations
-- View database contents.
-- Export database in **CSV**, **JSON**, and **Excel** formats.
-- Clean database (delete database file).
+Testing & Coverage: Includes unit tests and full pipeline tests with code coverage reporting.
 
-### Tests
-- Run **unit tests** for ETL modules.
-- Generate **coverage reports**.
-- Run **full ETL pipeline test**.
-- Test **Streamlit** and **Flask** UI launches.
+Web Access Interfaces: Optional Streamlit dashboard and Flask web interface for interactive data exploration.
 
-### Web Access
-- Launch **Streamlit dashboard** for interactive UI.
-- Launch **Flask website** for basic web interface.
+System & Health Checks: Built-in utilities to verify environment, database integrity, and service availability.
 
-### System Info
-- Display OS, Python version, CPU cores, and memory.
+Extensible & Modular: Designed for easy expansion with additional APIs, data sources, or analytics workflows.
 
-### Health Check
-- Verify database file existence.
-- Check if **Streamlit** and **Flask** are installed.
+This project is ideal for anyone looking to understand or demonstrate Python-based ETL pipelines, database management, and lightweight web interfaces for data analytics.
 
 ---
 
