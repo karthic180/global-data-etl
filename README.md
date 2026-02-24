@@ -4,7 +4,7 @@
 
 [![Python](https://img.shields.io/badge/Python-3.13-blue)](https://www.python.org/)
 [![Build Status](https://img.shields.io/github/actions/workflow/status/karthic180/global-data-etl/python-tests.yml)](https://github.com/karthic180/global-data-etl/actions)
-[![Coverage Status](https://img.shields.io/badge/Coverage-50%25-yellow)](https://github.com/karthic180/global-data-etl)# Global Data ETL
+[![Coverage Status](https://img.shields.io/badge/Coverage-50%25-yellow)](https://github.com/karthic180/global-data-etl)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 It is a comprehensive Python project that demonstrates end-to-end data engineering and analytics workflows. It is designed for learning, experimentation, and showcasing a real-world ETL process.
