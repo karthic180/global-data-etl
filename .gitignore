@@ -1,0 +1,65 @@
+# -------------------------
+# Python cache / build files
+# -------------------------
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pdb
+*.pkl
+*.egg-info/
+*.egg
+build/
+dist/
+
+# -------------------------
+# Virtual environments
+# -------------------------
+venv/
+env/
+.venv/
+
+# -------------------------
+# IDE / Editor files
+# -------------------------
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# -------------------------
+# OS files
+# -------------------------
+.DS_Store
+Thumbs.db
+
+# -------------------------
+# Database files
+# -------------------------
+*.db
+data/
+global_data.db
+
+# -------------------------
+# Exported ETL output
+# -------------------------
+*.csv
+*.json
+*.xlsx
+
+# -------------------------
+# Pytest cache
+# -------------------------
+.pytest_cache/
+.coverage
+htmlcov/
+
+# -------------------------
+# Logs
+# -------------------------
+*.log
+
+# -------------------------
+# Jupyter
+# -------------------------
+.ipynb_checkpoints/

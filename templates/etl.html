@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Run ETL</title>
+</head>
+<body>
+    <h1>Run ETL Pipeline</h1>
+
+    <form method="POST">
+        <label>Enter a country name (or "all"):</label><br>
+        <input type="text" name="country" required>
+        <button type="submit">Run</button>
+    </form>
+
+    {% if message %}
+        <p><strong>{{ message }}</strong></p>
+    {% endif %}
+
+    {% if results %}
+        <h3>Results</h3>
+        <table border="1" cellpadding="5">
+            <tr>
+                <th>Country</th>
+                <th>Status</th>
+            </tr>
+            {% for r in results %}
+            <tr>
+                <td>{{ r.name }}</td>
+                <td>{{ r.status }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    {% endif %}
+
+    <p>
+        <a href="/">Back to Home</a>
+    </p>
+</body>
+</html>

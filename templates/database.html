@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Database</title>
+</head>
+<body>
+    <h1>Database Contents</h1>
+
+    {% if rows %}
+        <table border="1" cellpadding="5">
+            <tr>
+                {% for h in headers %}
+                    <th>{{ h }}</th>
+                {% endfor %}
+            </tr>
+
+            {% for row in rows %}
+            <tr>
+                {% for h in headers %}
+                    <td>{{ row[h] }}</td>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+        </table>
+    {% else %}
+        <p><strong>No data found.</strong></p>
+    {% endif %}
+
+    <p>
+        <a href="/">Back to Home</a>
+    </p>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Temperature Charts</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<h1>Temperature Trends</h1>
+
+{% if not data_available %}
+    <p><strong>No data available.</strong></p>
+    <p><a href="/">Back to Home</a></p>
+{% else %}
+
+    <label>Select a country:</label>
+    <select id="countrySelect">
+        {% for c in countries %}
+            <option value="{{ c }}">{{ c }}</option>
+        {% endfor %}
+    </select>
+
+    <button onclick="loadChart()">Load Chart</button>
+
+    <h3 id="chartTitle"></h3>
+
+    <canvas id="tempChart" width="600" height="300"></canvas>
+
+    <script>
+        let chart = null;
+
+        function loadChart() {
+            const country = document.getElementById("countrySelect").value;
+
+            fetch(`/chart-data?country=${country}`)
+                .then(r => r.json())
+                .then(data => {
+                    if (!data.ok) {
+                        alert("No data available for this country.");
+                        return;
+                    }
+
+                    document.getElementById("chartTitle").innerText =
+                        "Temperature Trend for " + country;
+
+                    const ctx = document.getElementById("tempChart").getContext("2d");
+
+                    if (chart) chart.destroy();
+
+                    chart = new Chart(ctx, {
+                        type: 'line',
+                        data: {
+                            labels: data.timestamps,
+                            datasets: [
+                                {
+                                    label: "Temperature (°C)",
+                                    data: data.temp_c,
+                                    borderColor: "blue",
+                                    fill: false
+                                },
+                                {
+                                    label: "Temperature (°F)",
+                                    data: data.temp_f,
+                                    borderColor: "red",
+                                    fill: false
+                                }
+                            ]
+                        }
+                    });
+                });
+        }
+    </script>
+
+{% endif %}
+
+<p>
+    <a href="/">Back to Home</a>
+</p>
+
+</body>
+</html>
